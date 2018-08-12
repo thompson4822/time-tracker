@@ -6,8 +6,15 @@ import training.taylor.timetracker.core.dao.TimeEntry;
 
 import java.util.List;
 
+/**
+ * Track all of the time entries in the application.
+ */
 @Component
 public class Tracker implements ITracker {
+
+    /**
+     * What is the provider/repository for time entries?
+     */
     @Autowired
     private List<TimeEntry> entries;
 
