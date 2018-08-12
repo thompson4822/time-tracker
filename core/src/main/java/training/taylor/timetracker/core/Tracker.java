@@ -10,7 +10,7 @@ import java.util.List;
  * Track all of the time entries in the application.
  */
 @Component
-public class Tracker implements ITracker {
+public final class Tracker implements ITracker {
 
     /**
      * What is the provider/repository for time entries?
@@ -22,7 +22,7 @@ public class Tracker implements ITracker {
      * Add the given time entry to the known entries.
      * @param entry time entry to add.
      */
-    void add(final TimeEntry entry) {
+    final void add(final TimeEntry entry) {
         entries.add(entry);
     }
 
@@ -35,7 +35,7 @@ public class Tracker implements ITracker {
      * What is the size of the known entries?
      * @return size of known entries.
      */
-    int size() {
+    final int size() {
         return entries.size();
     }
 
