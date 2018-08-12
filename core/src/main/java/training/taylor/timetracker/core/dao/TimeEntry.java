@@ -9,8 +9,19 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope("prototype")
 public class TimeEntry implements ITimeEntry {
+    /**
+     * What is the current description for the time entry?
+     */
     private String description;
+
+    /**
+     * What is the current rate for the time entry?
+     */
     private float rate;
+
+    /**
+     * What is the current time for the time entry?
+     */
     private int time;
 
     @Override
@@ -49,10 +60,10 @@ public class TimeEntry implements ITimeEntry {
      */
     @Override
     public String toString() {
-        return "TimeEntry{" +
-                "description='" + description + '\'' +
-                ", rate=" + rate +
-                ", time=" + time +
-                '}';
+        return "TimeEntry{"
+                + "description='" + description + '\''
+                + ", rate=" + rate
+                + ", time=" + time
+                + '}';
     }
 }

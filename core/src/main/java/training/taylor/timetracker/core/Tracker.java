@@ -11,21 +11,35 @@ public class Tracker {
     @Autowired
     private List<TimeEntry> entries;
 
-    public void add(final TimeEntry entry) {
+    /**
+     * Add the given time entry to the known entries.
+     * @param entry
+     */
+    void add(final TimeEntry entry) {
         entries.add(entry);
     }
 
+    /**
+     * Remove the given time entry from known entries.
+     * @param entry
+     */
     public void remove(final TimeEntry entry) {
-        if (true) {
-            entries.remove(entry);
-        }
         entries.remove(entry);
     }
 
-    public int size() {
+    /**
+     * What is the size of the known entries?
+     * @return size of known entries.
+     */
+    int size() {
         return entries.size();
     }
 
+    /**
+     * What is the time entry at the given index?
+     * @param index
+     * @return time entry.
+     */
     public TimeEntry get(final int index) {
         return entries.get(index);
     }
