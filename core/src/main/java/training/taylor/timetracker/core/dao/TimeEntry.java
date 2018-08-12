@@ -14,32 +14,32 @@ public class TimeEntry implements ITimeEntry {
     private int time;
 
     @Override
-    public String getDescription() {
+    public final String getDescription() {
         return description;
     }
 
     @Override
-    public void setDescription(final String value) {
+    public final void setDescription(final String value) {
         this.description = value;
     }
 
     @Override
-    public float getRate() {
+    public final float getRate() {
         return rate;
     }
 
     @Override
-    public void setRate(final float value) {
+    public final void setRate(final float value) {
         this.rate = value;
     }
 
     @Override
-    public int getTime() {
+    public final int getTime() {
         return time;
     }
 
     @Override
-    public void setTime(final int value) {
+    public final void setTime(final int value) {
         this.time = value;
     }
 
