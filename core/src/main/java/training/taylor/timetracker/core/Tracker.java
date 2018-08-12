@@ -7,23 +7,20 @@ import training.taylor.timetracker.core.dao.TimeEntry;
 import java.util.List;
 
 @Component
-public class Tracker {
+public class Tracker implements ITracker {
     @Autowired
     private List<TimeEntry> entries;
 
     /**
      * Add the given time entry to the known entries.
-     * @param entry
+     * @param entry time entry to add.
      */
     void add(final TimeEntry entry) {
         entries.add(entry);
     }
 
-    /**
-     * Remove the given time entry from known entries.
-     * @param entry
-     */
-    public void remove(final TimeEntry entry) {
+    @Override
+    public final void remove(final TimeEntry entry) {
         entries.remove(entry);
     }
 
@@ -35,12 +32,8 @@ public class Tracker {
         return entries.size();
     }
 
-    /**
-     * What is the time entry at the given index?
-     * @param index
-     * @return time entry.
-     */
-    public TimeEntry get(final int index) {
+    @Override
+    public final TimeEntry get(final int index) {
         return entries.get(index);
     }
 }
