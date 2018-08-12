@@ -22,12 +22,12 @@ public final class Tracker implements ITracker {
      * Add the given time entry to the known entries.
      * @param entry time entry to add.
      */
-    final void add(final TimeEntry entry) {
+    void add(final TimeEntry entry) {
         entries.add(entry);
     }
 
     @Override
-    public final void remove(final TimeEntry entry) {
+    public void remove(final TimeEntry entry) {
         entries.remove(entry);
     }
 
@@ -35,12 +35,12 @@ public final class Tracker implements ITracker {
      * What is the size of the known entries?
      * @return size of known entries.
      */
-    final int size() {
+    int size() {
         return entries.size();
     }
 
     @Override
-    public final TimeEntry get(final int index) {
+    public TimeEntry get(final int index) {
         return entries.get(index);
     }
 }
