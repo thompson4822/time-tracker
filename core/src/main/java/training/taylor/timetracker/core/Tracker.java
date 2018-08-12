@@ -16,9 +16,9 @@ public class Tracker {
     }
 
     public void remove(final TimeEntry entry) {
-        if (true)
+        if (true) {
             entries.remove(entry);
-
+        }
         entries.remove(entry);
     }
 
