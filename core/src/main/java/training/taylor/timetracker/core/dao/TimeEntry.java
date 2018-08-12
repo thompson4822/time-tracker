@@ -8,55 +8,37 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Scope("prototype")
-public class TimeEntry {
+public class TimeEntry implements ITimeEntry {
     private String description;
     private float rate;
     private int time;
 
-    /**
-     * What is the description?
-     * @return description
-     */
+    @Override
     public String getDescription() {
         return description;
     }
 
-    /**
-     * Set the description to the given value
-     * @param value to set the description to
-     */
+    @Override
     public void setDescription(final String value) {
         this.description = value;
     }
 
-    /**
-     * What is the rate?
-     * @return rate
-     */
+    @Override
     public float getRate() {
         return rate;
     }
 
-    /**
-     * Set the rate to the given value
-     * @param value the rate
-     */
+    @Override
     public void setRate(final float value) {
         this.rate = value;
     }
 
-    /**
-     * What is the time?
-     * @return the time
-     */
+    @Override
     public int getTime() {
         return time;
     }
 
-    /**
-     * Set the time to the given value
-     * @param value the time
-     */
+    @Override
     public void setTime(final int value) {
         this.time = value;
     }
